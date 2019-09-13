@@ -8,6 +8,17 @@ public class Sighting {
             this.rangerName = rangerName;
         }
 
+    @Override
+    public boolean equals(Object otherSighting){
+        if (!(otherSighting instanceof Sighting)) {
+            return false;
+        } else {
+            Sighting newSighting = (Sighting) otherSighting;
+            return this.getLocation().equals(newSighting.getLocation()) &&
+                    this.getRangerName().equals(newSighting.getRangerName());
+        }
+    }
+
     public String getLocation() {
         return location;
     }
