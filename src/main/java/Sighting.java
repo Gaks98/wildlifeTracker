@@ -6,6 +6,7 @@ public class Sighting {
 
         private String location;
         private String rangerName;
+        private int id;
 
         public Sighting(String location, String rangerName) {
             this.location = location;
