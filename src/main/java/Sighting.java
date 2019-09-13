@@ -1,5 +1,7 @@
 import org.sql2o.Connection;
 
+import java.util.List;
+
 public class Sighting {
 
         private String location;
@@ -21,6 +23,14 @@ public class Sighting {
         }
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public String getRangerName() {
+        return rangerName;
+    }
+
     public void save() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO sightings (location, rangerName) VALUES (:location, :rangerName)";
@@ -31,11 +41,10 @@ public class Sighting {
         }
     }
 
-    public String getLocation() {
-        return location;
-    }
-
-    public String getRangerName() {
-        return rangerName;
+    public static List<Sighting> all() {
+        String sql = "SELECT * FROM sightings";
+        try(Connection con = DB.sql2o.open()) {
+            return con.createQuery(sql).executeAndFetch(Sighting.class);
+        }
     }
 }
