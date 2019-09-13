@@ -22,6 +22,15 @@ public class SightingTest {
         assertEquals("Henry", testSighting.getRangerName());
     }
 
+    @Test
+    public void equals_returnsTrueIfLocationAndRangerNameAreSame_true() {
+        Sighting firstSighting = setupNewSighting();
+        Sighting anotherSighting = setupNewSighting();
+        assertTrue(firstSighting.equals(anotherSighting));
+    }
+
+
+
     //helper method
     public Sighting setupNewSighting(){
         return new Sighting("Zone A", "Henry");
