@@ -32,6 +32,10 @@ public class Sighting {
         return rangerName;
     }
 
+    public int getId() {
+        return id;
+    }
+
     public void save() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO sightings (location, rangerName) VALUES (:location, :rangerName)";
