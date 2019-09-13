@@ -39,10 +39,11 @@ public class Sighting {
     public void save() {
         try(Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO sightings (location, rangerName) VALUES (:location, :rangerName)";
-            con.createQuery(sql)
+            con.createQuery(sql,true)
                     .addParameter("location", this.location)
                     .addParameter("rangerName", this.rangerName)
-                    .executeUpdate();
+                    .executeUpdate()
+                    .getKey();
         }
     }
 
