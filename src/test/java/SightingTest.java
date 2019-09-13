@@ -33,12 +33,21 @@ public class SightingTest {
     }
 
     @Test
-    public void save_insertsObjectIntoDatabase_Person() {
+    public void save_insertsObjectIntoDatabase_Sighting() {
         Sighting testSighting = setupNewSighting();
         testSighting.save();
         assertTrue(Sighting.all().get(0).equals(testSighting));
     }
 
+    @Test
+    public void all_returnsAllInstancesOfSighting_true() {
+        Sighting firstSighting = setupNewSighting();
+        firstSighting.save();
+        Sighting secondSighting = setupOtherSighting();
+        secondSighting.save();
+        assertEquals(true, Sighting.all().get(0).equals(firstSighting));
+        assertEquals(true, Sighting.all().get(1).equals(secondSighting));
+    }
 
 
     //helper method
