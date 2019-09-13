@@ -53,8 +53,17 @@ public class SightingTest {
     public void save_assignsIdToObject() {
         Sighting testSighting = setupNewSighting();
         testSighting.save();
-        Sighting savedPerson = Sighting.all().get(0);
-        assertEquals(testSighting.getId(), savedPerson.getId());
+        Sighting savedSighting = Sighting.all().get(0);
+        assertEquals(testSighting.getId(), savedSighting.getId());
+    }
+
+    @Test
+    public void find_returnsPersonWithSameId_secondPerson() {
+        Sighting firstSighting = setupNewSighting();
+        firstSighting.save();
+        Sighting secondSighting = setupOtherSighting();
+        secondSighting.save();
+        assertEquals(Sighting.find(secondSighting.getId()), secondSighting);
     }
 
     //helper method
