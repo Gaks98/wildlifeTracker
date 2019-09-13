@@ -49,6 +49,13 @@ public class SightingTest {
         assertEquals(true, Sighting.all().get(1).equals(secondSighting));
     }
 
+    @Test
+    public void save_assignsIdToObject() {
+        Sighting testSighting = setupNewSighting();
+        testSighting.save();
+        Sighting savedPerson = Sighting.all().get(0);
+        assertEquals(testSighting.getId(), savedPerson.getId());
+    }
 
     //helper method
     public Sighting setupNewSighting(){
