@@ -28,7 +28,7 @@ public class AnimalTest {
 
     @Test
     public void equals_returnsTrueIfNameAndSightingIdAreSame_true() {
-        Animal anotherAnimal = new Animal("Bubbles", 1);
+        Animal anotherAnimal = new Animal("Wolf", 1);
         assertTrue(testAnimal.equals(anotherAnimal));
     }
 
