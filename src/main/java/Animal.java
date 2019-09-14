@@ -9,6 +9,7 @@ public class Animal {
 
     public Animal(String name, int sightingId) {
         this.name = name;
+        this.sightingId =sightingId;
     }
 
     @Override
