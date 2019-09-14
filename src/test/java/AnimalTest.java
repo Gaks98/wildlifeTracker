@@ -5,7 +5,8 @@ import static org.junit.Assert.*;
 
 public class AnimalTest {
     Animal testAnimal = new Animal("Wolf", 1);
-    Animal secondMonster = new Animal("Spud", 1);
+    Animal secondAnimal = new Animal("Spud", 1);
+    Animal otherSecondAnimal = new Animal("Spud", 3);
 
      @Rule
         public DatabaseRule database = new DatabaseRule();
@@ -47,8 +48,16 @@ public class AnimalTest {
     @Test
     public void all_returnsAllInstancesOfMonster_true() {
         testAnimal.save();
-        secondMonster.save();
+        secondAnimal.save();
         assertEquals(true, Animal.all().get(0).equals(testAnimal));
-        assertEquals(true, Animal.all().get(1).equals(secondMonster));
+        assertEquals(true, Animal.all().get(1).equals(secondAnimal));
     }
+
+    @Test
+    public void find_returnsMonsterWithSameId_secondMonster() {
+        testAnimal.save();
+        otherSecondAnimal.save();
+        assertEquals(Animal.find(otherSecondAnimal.getId()), otherSecondAnimal);
+    }
+
 }
