@@ -19,4 +19,9 @@ public class AnimalTest {
         assertEquals("Wolf", testAnimal.getName());
         }
 
+    @Test
+    public void Animal_instantiatesWithSightingId_int() {
+        assertEquals(1, testAnimal.getSightingId());
+    }
+
 }
