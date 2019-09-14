@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 
 public class AnimalTest {
     Animal testAnimal = new Animal("Wolf", 1);
+    Animal secondMonster = new Animal("Spud", 1);
 
      @Rule
         public DatabaseRule database = new DatabaseRule();
@@ -41,5 +42,13 @@ public class AnimalTest {
         testAnimal.save();
         Animal savedMonster = Animal.all().get(0);
         assertEquals(savedMonster.getId(), testAnimal.getId());
+    }
+
+    @Test
+    public void all_returnsAllInstancesOfMonster_true() {
+        testAnimal.save();
+        secondMonster.save();
+        assertEquals(true, Animal.all().get(0).equals(testAnimal));
+        assertEquals(true, Animal.all().get(1).equals(secondMonster));
     }
 }
