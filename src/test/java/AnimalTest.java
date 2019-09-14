@@ -32,9 +32,8 @@ public class AnimalTest {
 
     @Test
     public void save_returnsTrueIfDescriptionsAretheSame() {
-        Monster testMonster = new Monster("Bubbles", 1);
-        testMonster.save();
-        assertTrue(Monster.all().get(0).equals(testMonster));
+        testAnimal.save();
+        assertTrue(Animal.all().get(0).equals(testAnimal));
     }
 
 }
