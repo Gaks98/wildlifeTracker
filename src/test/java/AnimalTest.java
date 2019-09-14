@@ -39,14 +39,14 @@ public class AnimalTest {
     }
 
     @Test
-    public void save_assignsIdToMonster() {
+    public void save_assignsIdToAnimal() {
         testAnimal.save();
         Animal savedMonster = Animal.all().get(0);
         assertEquals(savedMonster.getId(), testAnimal.getId());
     }
 
     @Test
-    public void all_returnsAllInstancesOfMonster_true() {
+    public void all_returnsAllInstancesOfAnimal_true() {
         testAnimal.save();
         secondAnimal.save();
         assertEquals(true, Animal.all().get(0).equals(testAnimal));
@@ -54,10 +54,20 @@ public class AnimalTest {
     }
 
     @Test
-    public void find_returnsMonsterWithSameId_secondMonster() {
+    public void find_returnsAnimalWithSameId_otherSecondAnimal() {
         testAnimal.save();
         otherSecondAnimal.save();
         assertEquals(Animal.find(otherSecondAnimal.getId()), otherSecondAnimal);
+    }
+
+    @Test
+    public void save_savesPersonIdIntoDB_true() {
+        Sighting testSighting = new Sighting("Henry", "henry@henry.com");
+        testSighting.save();
+        Animal testAnimal2 = new Animal("Bubbles", testSighting.getId());
+        testAnimal2.save();
+        Animal savedAnimal = Animal.find(testAnimal2.getId());
+        assertEquals(savedAnimal.getSightingId(), testSighting.getId());
     }
 
 }
