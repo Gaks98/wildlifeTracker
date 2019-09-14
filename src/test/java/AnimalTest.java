@@ -61,8 +61,8 @@ public class AnimalTest {
     }
 
     @Test
-    public void save_savesPersonIdIntoDB_true() {
-        Sighting testSighting = new Sighting("Henry", "henry@henry.com");
+    public void save_savesSightingIdIntoDB_true() {
+        Sighting testSighting = new Sighting("Zone A", "Henry");
         testSighting.save();
         Animal testAnimal2 = new Animal("Bubbles", testSighting.getId());
         testAnimal2.save();

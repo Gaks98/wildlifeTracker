@@ -70,13 +70,13 @@ public class SightingTest {
 
     @Test
     public void getAnimals_retrievesAllAnimalsFromDatabase_animalsList() {
-        Sighting testSighting = setupNewSighting();
+        Sighting testSighting = new Sighting("Zone A","Henry");
         testSighting.save();
         Animal firstAnimal = new Animal("Bubbles", testSighting.getId());
         firstAnimal.save();
-        Animal secondAnimal = new Animal("Spud", testSighting.getId());
-        secondAnimal.save();
-        Animal[] animals = new Animal[] { firstAnimal, secondAnimal };
+        Animal secondAnimal2 = new Animal("Spud", testSighting.getId());
+        secondAnimal2.save();
+        Animal[] animals = new Animal[] { firstAnimal, secondAnimal2 };
         assertTrue(testSighting.getAnimals().containsAll(Arrays.asList(animals)));
     }
 
