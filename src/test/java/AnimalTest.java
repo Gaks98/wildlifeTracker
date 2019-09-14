@@ -25,9 +25,16 @@ public class AnimalTest {
     }
 
     @Test
-    public void equals_returnsTrueIfNameAndPersonIdAreSame_true() {
+    public void equals_returnsTrueIfNameAndSightingIdAreSame_true() {
         Animal anotherAnimal = new Animal("Bubbles", 1);
         assertTrue(testAnimal.equals(anotherAnimal));
+    }
+
+    @Test
+    public void save_returnsTrueIfDescriptionsAretheSame() {
+        Monster testMonster = new Monster("Bubbles", 1);
+        testMonster.save();
+        assertTrue(Monster.all().get(0).equals(testMonster));
     }
 
 }
