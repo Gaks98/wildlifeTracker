@@ -9,4 +9,8 @@ public class Animal {
     public String getName() {
         return name;
     }
+
+    public int getSightingId() {
+        return sightingId;
+    }
 }
