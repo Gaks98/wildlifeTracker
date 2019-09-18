@@ -83,6 +83,9 @@ body {
   font-weight: 200;
 }
 
+pre{
+color:pink;
+}
 /* #on-click {
   visibility: hidden;
 } */
