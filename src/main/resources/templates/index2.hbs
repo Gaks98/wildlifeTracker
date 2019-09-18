@@ -1,0 +1,21 @@
+{{#partial "content"}}
+<h1>Report animal sighting</h1>
+
+<!--   "/animal/new" -->
+<h3><a href= "/animal/new">click if it's not an endangered animal </a></h3>
+<h3><a href= "/endangeredAnimal/new">click if it's an endangered animal </a></h3>
+
+<h3> Report Non-Endangered Animal Sighting </h3>
+{{#if endangeredAnimals}}
+{{#each endangeredAnimals}}
+
+    <p><a href="endangered_animal/{{id}}">{{name}}</a></p>
+
+{{/each}}
+{{else}}
+<p>No endangered animal</p>
+{{/if}}
+<!--    it will post in the /sighting route-->
+<h3>Endangered Animal Sightings</h3>
+{{/partial}}
+{{> layout.hbs}}

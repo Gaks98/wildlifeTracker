@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Germania+One');
+
+body {
+  color: aliceblue;
+  background: #060c21;
+  font-family: 'Germania One', cursive;
+}
+
+.col-sm-4 img {
+  width: 100%;
+  /*contains the img in its div*/
+  height: auto;
+}
+
+#center {
+  position: relative;
+  background: #060c21;
+  border: 2px solid #000;
+  margin-top: 20px;
+}
+
+#center::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  transform: skew(2deg, 2deg);
+  z-index: -1;
+  background: linear-gradient(315deg, #e91e63, #5d02ff);
+}
+
+#center::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  pointer-events: none;
+}
+
+.form-group {
+  position: relative;
+  padding: 5px;
+  transform: translateY(40px);
+}
+
+.btn {
+  position: relative;
+  margin: 20px 0 0 60px;
+  padding: 10px 20px;
+  display: inline-block;
+  transition: 0.5s;
+  transform: translateX(-40px);
+}
+
+.btn:hover {
+  transform: translateX(0);
+}
+
+#pic {
+  width: 150px;
+  height: 150px;
+  padding: 5px;
+  margin-left: 26%;
+  margin-right: 26%;
+}
+
+#pic img {
+  border-radius: 100px;
+}
+
+#col3 {
+  margin-top: 250px;
+}
+
+#col3 p {
+  font-size: 40px;
+  font-weight: 200;
+}
+
+pre{
+color:pink;
+}
+/* #on-click {
+  visibility: hidden;
+} */

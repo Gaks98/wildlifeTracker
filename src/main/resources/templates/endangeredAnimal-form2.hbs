@@ -1,0 +1,41 @@
+{{#partial "content"}}
+
+    <!--"/animal/new"   method="post"-->
+    <form action="/endangeredAnimal/new" method="POST">
+        <label>Animal Species</label>
+        <input type="text" name="nameOfAnimal" id="nameOfAnimal">
+        <label for="endangered">Endangered?</label>
+        <input type="checkbox" name="endangered" id="endangered" required>
+
+        <h3>Additional Info for Endangered Animals:</h3>
+
+        <label>Health</label>
+        <select name="health">
+            <option>Ill</option>
+            <option>Okay</option>
+            <option>Healthy</option>
+        </select>
+
+        <label>Age</label>
+        <select name="age">
+            <option>Newborn</option>
+            <option>Young</option>
+            <option>Adult</option>
+        </select>
+
+        <label for="rangerName">Ranger's Name:</label>
+        <input id="rangerName" name="rangerName" type="text">
+
+        <label for="location">Location</label>
+        <select name="location">
+            <option>Zone A</option>
+            <option>Zone B</option>
+            <option>Zone C</option>
+        </select>
+
+
+        <button type="submit">Add Animal</button>
+
+    </form>
+{{/partial}}
+{{> layout.hbs}}
