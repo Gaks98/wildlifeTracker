@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Endangered Animal-form</title>
+    <link rel="stylesheet" href="/css/form.css" type="text/css">
+</head>
+<body>
+<div class=" container-fluid">
+    <div class="row">
+        <div class="col-sm-4"></div>
+
+        <div class="col-sm-4" id="center">
+
+
+            <div id="pic" class="img-responsive">
+                <img src="https://bit.ly/2kPm8Bz">
+            </div>
+
+
+            <form action="/endangeredAnimal/new" method="POST" name="test">
+                <div class="form-group">
+                    <label for="nameOfAnimal">Animal Species
+                        <input type="text" name="nameOfAnimal" id="nameOfAnimal" required>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="endangered">Endangered?
+                        <input type="checkbox" name="endangered" id="endangered" required>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="health">Health
+                        <select name="health">
+                            <option>Ill</option>
+                            <option>Okay</option>
+                            <option>Healthy</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age
+                        <select name="age">
+                            <option>Newborn</option>
+                            <option>Young</option>
+                            <option>Adult</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="rangerName">Ranger's Name:
+                        <input id="rangerName" name="rangerName" type="text" required>
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">Location
+                        <select name="location">
+                            <option>Zone A</option>
+                            <option>Zone B</option>
+                            <option>Zone C</option>
+                        </select>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-success">Add Animal</button>
+
+                <br>
+            </form>
+        </div>
+
+        <div class="col-sm-4" id="col3">
+            <div id="after_submit">
+                <p id="message"></p>
+                <p id="number_correct"></p>
+                <img id="picture">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>
+</body>
+</html>
+

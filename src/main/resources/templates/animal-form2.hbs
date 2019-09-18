@@ -1,0 +1,35 @@
+{{#partial "content"}}
+<div class="loginBox" style="font-family:'Luckiest Guy', cursive">
+<!--    <img src="https://bit.ly/2Wekzho" class="user">-->
+    <form id="contact" action="/animal/new" method="POST">
+        <h3 id="green-text">Report Animal</h3>
+
+        <label for="nameOfAnimal">
+
+            <input id="nameOfAnimal" name="nameOfAnimal" placeholder="Animal Name" type="text" tabindex="1" required autofocus>
+        </label>
+
+        <label for="rangerName">Ranger's Name:</label>
+        <input id="rangerName" name="rangerName" type="text">
+
+        <label for="location">Location</label>
+        <select name="location">
+            <option>Zone A</option>
+            <option>Zone B</option>
+            <option>Zone C</option>
+        </select>
+
+        <label for="sightingId">Sighting Id</label>
+        <select name="sightingId" required>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+        </select>
+
+        <button name="submit" type="submit" id="submit">Report Animal!</button>
+    </form>
+</div>
+
+</div>
+{{/partial}}
+{{> layout.hbs}}

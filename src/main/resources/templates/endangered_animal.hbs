@@ -1,16 +1,55 @@
-<h4><a href="/">Home</a></h4>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>Endangered Animal-form</title>
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+<div class=" container-fluid">
+    <div class="row">
+        <div class="col-sm-4"></div>
 
-<h1>$endangeredAnimal.getName()</h1>
-<h3>ID: $endangeredAnimal.getId()</h3>
+        <div class="col-sm-4" id="center">
 
-#if($endangeredAnimal.getSightings().size() == 0)
-  <p>To report a sighting, please visit the <a href="/">home page</a>.</p>
-#else
-  #foreach($sighting in $endangeredAnimal.getSightings())
-    Location: <strong>$sighting.getLocation()</strong>
-    Health: $endangeredAnimal.getHealth()
-    Age: $endangeredAnimal.getAge()
-    Reported by: $sighting.getRangerName()
-    ID: $sighting.getId()
-  #end
-#end
+
+            <div id="pic" class="img-responsive">
+                <img src="https://bit.ly/2kPm8Bz">
+            </div>
+
+
+            <h4><a href="/">Home</a></h4>
+
+            <h1>endangered Animal details</h1>
+
+            {{#if nameOfAnimal}}
+              <h5>Name:{{nameOfAnimal}}</h5>
+              <h5>Location:{{location}}</h5>
+               <h5>Health: {{health}}</h5>
+                <h5>Age: {{age}}</h5>
+                <h5>Reported by: {{rangerName}}</h5>
+            {{else}}
+                <p>To report a sighting, please visit the <a href="/">home page</a>.</p>
+            {{/if}}
+        </div>
+
+        <div class="col-sm-4" id="col3">
+            <div id="after_submit">
+                <p id="message"></p>
+                <p id="number_correct"></p>
+                <img id="picture">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>
+</body>
+</html>
+

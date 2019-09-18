@@ -1,0 +1,17 @@
+{{#partial "content"}}
+    <h4><a href="/">Home</a></h4>
+
+    <h1>endangered Animal details</h1>
+
+    {{#if nameOfAnimal}}
+        Name:{{nameOfAnimal}}
+        Location:{{location}}
+        Health: {{health}}
+        Age: {{age}}
+        Reported by: {{rangerName}}
+    {{else}}
+        <p>To report a sighting, please visit the <a href="/">home page</a>.</p>
+    {{/if}}
+{{/partial}}
+
+{{> layout.hbs}}
