@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+section.sec1 {
+  background: url(https://bit.ly/2lWZeZa);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+section.sec2 {
+  background: url(https://bit.ly/2mliJen);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+section.sec3 {
+  background: url(https://bit.ly/2kPPjEL);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+section.sec4 {
+  background: url(https://bit.ly/2mlmP6f);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+section.secText {
+  padding: 50px 100px;
+  height: auto;
+}
+
+section.secText h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 48px;
+  color: #262626;
+}
+
+section.secText p {
+  font-size: 18px;
+}
+
+/* navbar */
+ @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700');
+
+ .rectangle {
+   margin: 0;
+   padding: 0;
+   display: flex;
+   justify-content: center;
+   /* align-items: center; */
+   min-height: 100vh;
+   background: url("https://bit.ly/2kD6c5C");
+   font-family: 'Poppins', sans-serif;
+    background-size:     cover;                      /* <------ */
+        background-repeat:   no-repeat;
+       background-position: center center;
+ }
+
+ .textOver{
+   background-color: white;
+   position: absolute;
+   height: 150px;
+   width: 100%;
+
+    /* padding: 2px;  */
+   margin-top: 620px;
+   /* margin-left: -350px; */
+   /* color: black; */
+   /* font-weight: 600; */
+   font-size: 16px;
+ }
+
+img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+ .pic1{
+   margin-top: -298px;
+   margin-left: 150px;
+   height: 400px;
+   width: 400px;
+ }
+ .pic2 {
+   margin-top: -400px;
+   margin-left: 390px;
+   height: 400px;
+   width: 400px;
+ }
+ .pic3 {
+   margin-top: -400px;
+   margin-left: 630px;
+   height: 400px;
+   width: 400px;
+ }
+ .pic4 {
+   margin-top: -400px;
+   margin-left: 869px;
+   height: 400px;
+   width: 400px;
+ }
+
+ ul {
+   margin-top: 70px;
+   padding: 0;
+   display: flex;
+ }
+
+ ul li {
+   position: relative;
+   list-style: none;
+   margin: 0 80px;
+ }
+
+ ul li a {
+   position: relative;
+   height: 20px;
+   display: block;
+   text-decoration: none;
+   overflow: hidden;
+   text-transform: uppercase;
+   font-weight: 600;
+ }
+
+ ul li a span {
+   width: 100%;
+   height: 100%;
+   display: block;
+   transition: 0.5s;
+   color: #fff;
+ }
+/*490-green*/
+ ul li a span:nth-child(1) {
+   color: #444;
+ }
+
+ ul li a span:nth-child(2) {
+   color: #fff;
+ }
+
+ ul li:hover a span:nth-child(1) {
+   transform: translateY(-100%);
+ }
+
+ ul li:hover a span:nth-child(2) {
+   transform: translateY(-100%);
+ }
+
+
+
+
+/* ul li::before {
+     content: '';
+     position: absolute;
+     top: -90px;
+     left: -65px;
+     width: 200px;
+     height: 200px;
+     background: #00f;
+     z-index: 1;
+     opacity: 0;
+     transition: 0.5s;
+     transform: translateY(100px);
+   }
+
+   ul li:hover::before {
+     opacity: 1;
+     transition-delay: 0.5s;
+     transform: translateY(0px);
+   }
+
+   ul li:nth-child(1)::before {
+     background: url("https://bit.ly/2meCST7");
+     background-size: cover;
+   }
+
+   ul li:nth-child(2)::before {
+     background: url("https://bit.ly/2Y5r9E7");
+     background-size: cover;
+   }
+
+   ul li:nth-child(3)::before {
+     background: url("https://bit.ly/2mlo3yn");
+     background-size: cover;
+   }
+
+   ul li:nth-child(4)::before {
+     background: url("https://bit.ly/2meD6cV");
+     background-size: cover;
+   }
+
+   ul li:nth-child(5)::before {
+     background: url("https://bit.ly/2kMESBP");
+     background-size: cover;
+   }
+
+   ul li:nth-child(6)::before {
+     background: url("https://bit.ly/2H2htDH");
+     background-size: cover;
+   }*/
